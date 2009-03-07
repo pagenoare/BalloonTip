@@ -4,7 +4,7 @@
 from BalloonTip import BalloonTip
 
 if __name__ == '__main__':
-    balloon = BalloonTip("Example of BalloonTip class")
+    balloon = BalloonTip("Example of BalloonTip class", icon="example.ico")
     balloon.create_tray_icon()
     
     number = raw_input("Podaj liczbe: ")
