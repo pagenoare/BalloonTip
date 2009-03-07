@@ -1,6 +1,8 @@
 #!/usr/bin/env python2.5
 # -*- coding: utf-8 -*-
 
+import os.path
+
 import win32api
 import win32con
 import win32gui
