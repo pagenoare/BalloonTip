@@ -11,7 +11,7 @@ class BalloonTip():
     tray = False
         
     def __init__(self, className, windowName="Python", icon=None):
-        """Instalize all needed things"""
+        """Initialize all needed things"""
         wndclass = win32gui.WNDCLASS()
         hinst = wndclass.hInstance = win32api.GetModuleHandle(None)
         if icon is None:
