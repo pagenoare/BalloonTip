@@ -14,11 +14,11 @@ class BalloonTip():
         """Initialize all needed things"""
         wndclass = win32gui.WNDCLASS()
         hinst = wndclass.hInstance = win32api.GetModuleHandle(None)
-        if icon is None:
+        if icon is None or not os.path.isfile(icon):
             self.icon = win32gui.LoadIcon(0, win32con.IDI_APPLICATION)
         else:
-            # TODO: replace it to real your own icon selector
-            self.icon = win32gui.LoadIcon(0, win32con.IDI_APPLICATION)
+            self.icon = win32gui.LoadImage(hinst, icon, win32con.IMAGE_ICON, 0,
+                                           0, win32con.LR_LOADFROMFILE | win32con.LR_DEFAULTSIZE)
 
         self.flags = win32gui.NIF_ICON | win32gui.NIF_MESSAGE | win32gui.NIF_INFO  
 
