@@ -8,7 +8,7 @@ import win32con
 import win32gui
 
 
-class BalloonTip():
+class BalloonTip(object):
     """Class which makes easier to show Balloon Tips and create tray icon (Windows)"""
     tray = False
         
